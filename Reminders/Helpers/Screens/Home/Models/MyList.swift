@@ -9,13 +9,19 @@ import Foundation
 import CoreData
 import AppKit
 
-class MyList: NSManagedObject {
+import Foundation
+import CoreData
+import AppKit
+
+@objc(MyList)
+class MyList: NSManagedObject, BaseModel {
 
 }
 
 extension MyList {
+
     @nonobjc public class func fetchRequest() -> NSFetchRequest<MyList> {
-        return NSFetchRequest<MyList>(entityName: "List")
+        return NSFetchRequest<MyList>(entityName: "MyList")
     }
 
     @NSManaged public var color: NSColor?
@@ -23,6 +29,6 @@ extension MyList {
 
 }
 
-extension MyList: Identifiable {
+extension MyList : Identifiable {
 
 }
