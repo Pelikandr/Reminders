@@ -9,13 +9,13 @@ import Foundation
 import CoreData
 import AppKit
 
-import Foundation
-import CoreData
-import AppKit
-
 @objc(MyList)
 class MyList: NSManagedObject, BaseModel {
-
+    static var all: NSFetchRequest<MyList> {
+        let request: NSFetchRequest<MyList> = MyList.fetchRequest()
+        request.sortDescriptors = []
+        return request
+    }
 }
 
 extension MyList {

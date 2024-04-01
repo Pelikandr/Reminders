@@ -10,6 +10,9 @@
 		9A7FB98E2BBB2618009F048D /* ColorListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7FB98D2BBB2618009F048D /* ColorListView.swift */; };
 		9A7FB9952BBB2795009F048D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7FB9942BBB2795009F048D /* Constants.swift */; };
 		9A7FB99A2BBB42BB009F048D /* NSColorTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7FB9992BBB42BB009F048D /* NSColorTransformer.swift */; };
+		9A7FB99D2BBB4C72009F048D /* MyListsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7FB99C2BBB4C72009F048D /* MyListsViewModel.swift */; };
+		9A7FB99F2BBB5056009F048D /* MyListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7FB99E2BBB5056009F048D /* MyListViewModel.swift */; };
+		9A7FB9A42BBB55DD009F048D /* MyListsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7FB9A32BBB55DD009F048D /* MyListsView.swift */; };
 		9AE21C202B8254BA00D9CE46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AE21C1F2B8254BA00D9CE46 /* Assets.xcassets */; };
 		9AE21C232B8254BA00D9CE46 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AE21C222B8254BA00D9CE46 /* Preview Assets.xcassets */; };
 		9AE21C2C2B82552400D9CE46 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE21C2B2B82552400D9CE46 /* HomeScreen.swift */; };
@@ -27,6 +30,9 @@
 		9A7FB98D2BBB2618009F048D /* ColorListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorListView.swift; sourceTree = "<group>"; };
 		9A7FB9942BBB2795009F048D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9A7FB9992BBB42BB009F048D /* NSColorTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSColorTransformer.swift; sourceTree = "<group>"; };
+		9A7FB99C2BBB4C72009F048D /* MyListsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListsViewModel.swift; sourceTree = "<group>"; };
+		9A7FB99E2BBB5056009F048D /* MyListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListViewModel.swift; sourceTree = "<group>"; };
+		9A7FB9A32BBB55DD009F048D /* MyListsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListsView.swift; sourceTree = "<group>"; };
 		9AE21C182B8254B900D9CE46 /* Reminders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reminders.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE21C1F2B8254BA00D9CE46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9AE21C222B8254BA00D9CE46 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -65,6 +71,8 @@
 			isa = PBXGroup;
 			children = (
 				9A7FB9932BBB2772009F048D /* Home */,
+				9A7FB99B2BBB4C66009F048D /* MyLists */,
+				9A7FB9A02BBB5113009F048D /* MyList */,
 				9A7FB9912BBB273B009F048D /* AddNewList */,
 			);
 			name = Screens;
@@ -92,7 +100,6 @@
 		9A7FB9932BBB2772009F048D /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				9AE21C332B825CB200D9CE46 /* Models */,
 				9AE21C2D2B82593900D9CE46 /* Views */,
 			);
 			path = Home;
@@ -123,6 +130,24 @@
 				9A7FB9992BBB42BB009F048D /* NSColorTransformer.swift */,
 			);
 			path = Transformers;
+			sourceTree = "<group>";
+		};
+		9A7FB99B2BBB4C66009F048D /* MyLists */ = {
+			isa = PBXGroup;
+			children = (
+				9AE21C332B825CB200D9CE46 /* Models */,
+				9A7FB99C2BBB4C72009F048D /* MyListsViewModel.swift */,
+				9A7FB9A32BBB55DD009F048D /* MyListsView.swift */,
+			);
+			path = MyLists;
+			sourceTree = "<group>";
+		};
+		9A7FB9A02BBB5113009F048D /* MyList */ = {
+			isa = PBXGroup;
+			children = (
+				9A7FB99E2BBB5056009F048D /* MyListViewModel.swift */,
+			);
+			path = MyList;
 			sourceTree = "<group>";
 		};
 		9AE21C0F2B8254B900D9CE46 = {
@@ -260,13 +285,16 @@
 			files = (
 				9AE21C382B8260F400D9CE46 /* DataSource.swift in Sources */,
 				9A7FB9952BBB2795009F048D /* Constants.swift in Sources */,
+				9A7FB99F2BBB5056009F048D /* MyListViewModel.swift in Sources */,
 				9AE21C3D2B826A6800D9CE46 /* AddNewListViewModel.swift in Sources */,
 				9AE21C2F2B82594700D9CE46 /* SideBarView.swift in Sources */,
 				9AE21C422B82711000D9CE46 /* AddNewListView.swift in Sources */,
 				9A7FB98E2BBB2618009F048D /* ColorListView.swift in Sources */,
 				9AE21C322B825B1000D9CE46 /* RemindersModel.xcdatamodeld in Sources */,
+				9A7FB99D2BBB4C72009F048D /* MyListsViewModel.swift in Sources */,
 				9AE21C352B825CCD00D9CE46 /* MyList.swift in Sources */,
 				9AE21C2C2B82552400D9CE46 /* HomeScreen.swift in Sources */,
+				9A7FB9A42BBB55DD009F048D /* MyListsView.swift in Sources */,
 				9AE21C3F2B826ED400D9CE46 /* BaseModel.swift in Sources */,
 				9A7FB99A2BBB42BB009F048D /* NSColorTransformer.swift in Sources */,
 				9AE21C3A2B82688000D9CE46 /* RemindersApp.swift in Sources */,

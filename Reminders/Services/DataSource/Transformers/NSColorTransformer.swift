@@ -8,7 +8,7 @@
 import Foundation
 import AppKit
 
-class NSColorTransformer: NSSecureUnarchiveFromDataTransformer {
+class NSColorTransformer: ValueTransformer {
     override func transformedValue(_ value: Any?) -> Any? {
         guard let color = value as? NSColor else { return nil }
         do {

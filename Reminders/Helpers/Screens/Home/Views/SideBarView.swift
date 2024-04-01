@@ -13,11 +13,7 @@ struct SideBarView: View {
 
     var body: some View {
         VStack(alignment: .leading) {
-            Text("All items count 10")
-
-            List(1..<10, id: \.self) { item in
-                Text("List \(item)")
-            }
+            MyListsView(viewModel: MyListsViewModel(context: context))
 
             Spacer()
 
