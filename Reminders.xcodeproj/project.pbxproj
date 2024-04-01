@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9A7FB98E2BBB2618009F048D /* ColorListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7FB98D2BBB2618009F048D /* ColorListView.swift */; };
 		9A7FB9952BBB2795009F048D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7FB9942BBB2795009F048D /* Constants.swift */; };
+		9A7FB99A2BBB42BB009F048D /* NSColorTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7FB9992BBB42BB009F048D /* NSColorTransformer.swift */; };
 		9AE21C202B8254BA00D9CE46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AE21C1F2B8254BA00D9CE46 /* Assets.xcassets */; };
 		9AE21C232B8254BA00D9CE46 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AE21C222B8254BA00D9CE46 /* Preview Assets.xcassets */; };
 		9AE21C2C2B82552400D9CE46 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE21C2B2B82552400D9CE46 /* HomeScreen.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		9A7FB98D2BBB2618009F048D /* ColorListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorListView.swift; sourceTree = "<group>"; };
 		9A7FB9942BBB2795009F048D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9A7FB9992BBB42BB009F048D /* NSColorTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSColorTransformer.swift; sourceTree = "<group>"; };
 		9AE21C182B8254B900D9CE46 /* Reminders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reminders.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE21C1F2B8254BA00D9CE46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9AE21C222B8254BA00D9CE46 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -105,6 +107,24 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		9A7FB9972BBB4285009F048D /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				9A7FB9982BBB4295009F048D /* Transformers */,
+				9AE21C372B8260F400D9CE46 /* DataSource.swift */,
+				9AE21C302B825B1000D9CE46 /* RemindersModel.xcdatamodeld */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		9A7FB9982BBB4295009F048D /* Transformers */ = {
+			isa = PBXGroup;
+			children = (
+				9A7FB9992BBB42BB009F048D /* NSColorTransformer.swift */,
+			);
+			path = Transformers;
+			sourceTree = "<group>";
+		};
 		9AE21C0F2B8254B900D9CE46 = {
 			isa = PBXGroup;
 			children = (
@@ -163,8 +183,7 @@
 		9AE21C362B8260BD00D9CE46 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				9AE21C372B8260F400D9CE46 /* DataSource.swift */,
-				9AE21C302B825B1000D9CE46 /* RemindersModel.xcdatamodeld */,
+				9A7FB9972BBB4285009F048D /* DataSource */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -249,6 +268,7 @@
 				9AE21C352B825CCD00D9CE46 /* MyList.swift in Sources */,
 				9AE21C2C2B82552400D9CE46 /* HomeScreen.swift in Sources */,
 				9AE21C3F2B826ED400D9CE46 /* BaseModel.swift in Sources */,
+				9A7FB99A2BBB42BB009F048D /* NSColorTransformer.swift in Sources */,
 				9AE21C3A2B82688000D9CE46 /* RemindersApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,7 +398,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Reminders/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Reminders/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 4SZLS5SJ8N;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -405,7 +425,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Reminders/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Reminders/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 4SZLS5SJ8N;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
