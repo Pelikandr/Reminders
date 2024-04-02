@@ -22,6 +22,9 @@
 		9A7FB9B42BBC26E5009F048D /* DueDateSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7FB9B32BBC26E5009F048D /* DueDateSelectionView.swift */; };
 		9A7FB9B62BBC2EDD009F048D /* MyListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7FB9B52BBC2EDD009F048D /* MyListItem.swift */; };
 		9A7FB9B82BBC32C4009F048D /* ListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7FB9B72BBC32C4009F048D /* ListItemCell.swift */; };
+		9A7FB9BA2BBC4EB3009F048D /* EditListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7FB9B92BBC4EB3009F048D /* EditListItemView.swift */; };
+		9A7FB9BC2BBC4F66009F048D /* EditListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7FB9BB2BBC4F66009F048D /* EditListItemViewModel.swift */; };
+		9A7FB9BF2BBC5443009F048D /* CalendarButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7FB9BE2BBC5443009F048D /* CalendarButtonView.swift */; };
 		9AE21C202B8254BA00D9CE46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AE21C1F2B8254BA00D9CE46 /* Assets.xcassets */; };
 		9AE21C232B8254BA00D9CE46 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AE21C222B8254BA00D9CE46 /* Preview Assets.xcassets */; };
 		9AE21C2C2B82552400D9CE46 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE21C2B2B82552400D9CE46 /* HomeScreen.swift */; };
@@ -51,6 +54,9 @@
 		9A7FB9B32BBC26E5009F048D /* DueDateSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DueDateSelectionView.swift; sourceTree = "<group>"; };
 		9A7FB9B52BBC2EDD009F048D /* MyListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListItem.swift; sourceTree = "<group>"; };
 		9A7FB9B72BBC32C4009F048D /* ListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemCell.swift; sourceTree = "<group>"; };
+		9A7FB9B92BBC4EB3009F048D /* EditListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditListItemView.swift; sourceTree = "<group>"; };
+		9A7FB9BB2BBC4F66009F048D /* EditListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditListItemViewModel.swift; sourceTree = "<group>"; };
+		9A7FB9BE2BBC5443009F048D /* CalendarButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarButtonView.swift; sourceTree = "<group>"; };
 		9AE21C182B8254B900D9CE46 /* Reminders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reminders.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE21C1F2B8254BA00D9CE46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9AE21C222B8254BA00D9CE46 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -127,6 +133,7 @@
 		9A7FB9962BBB3FB5009F048D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9A7FB9BD2BBC5435009F048D /* Components */,
 				9AE21C212B8254BA00D9CE46 /* Preview Content */,
 				9AE21C1F2B8254BA00D9CE46 /* Assets.xcassets */,
 			);
@@ -167,6 +174,7 @@
 			children = (
 				9A7FB9A72BBC1E26009F048D /* Views */,
 				9A7FB9AA2BBC1FA5009F048D /* MyListItemViewModel.swift */,
+				9A7FB9BB2BBC4F66009F048D /* EditListItemViewModel.swift */,
 			);
 			path = MyListItems;
 			sourceTree = "<group>";
@@ -179,6 +187,7 @@
 				9A7FB9B12BBC2603009F048D /* AddNewListItemView.swift */,
 				9A7FB9B32BBC26E5009F048D /* DueDateSelectionView.swift */,
 				9A7FB9B72BBC32C4009F048D /* ListItemCell.swift */,
+				9A7FB9B92BBC4EB3009F048D /* EditListItemView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -189,6 +198,14 @@
 				9A7FB9AF2BBC2083009F048D /* Date+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9A7FB9BD2BBC5435009F048D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				9A7FB9BE2BBC5443009F048D /* CalendarButtonView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		9AE21C0F2B8254B900D9CE46 = {
@@ -319,6 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A7FB9A92BBC1E3C009F048D /* MyListItemsView.swift in Sources */,
+				9A7FB9BC2BBC4F66009F048D /* EditListItemViewModel.swift in Sources */,
 				9AE21C382B8260F400D9CE46 /* DataSource.swift in Sources */,
 				9A7FB9952BBB2795009F048D /* Constants.swift in Sources */,
 				9A7FB99F2BBB5056009F048D /* MyListViewModel.swift in Sources */,
@@ -331,11 +349,13 @@
 				9A7FB98E2BBB2618009F048D /* ColorListView.swift in Sources */,
 				9AE21C322B825B1000D9CE46 /* RemindersModel.xcdatamodeld in Sources */,
 				9A7FB99D2BBB4C72009F048D /* MyListsViewModel.swift in Sources */,
+				9A7FB9BF2BBC5443009F048D /* CalendarButtonView.swift in Sources */,
 				9AE21C352B825CCD00D9CE46 /* MyList.swift in Sources */,
 				9A7FB9B22BBC2603009F048D /* AddNewListItemView.swift in Sources */,
 				9A7FB9B62BBC2EDD009F048D /* MyListItem.swift in Sources */,
 				9AE21C2C2B82552400D9CE46 /* HomeScreen.swift in Sources */,
 				9A7FB9B02BBC2083009F048D /* Date+Extensions.swift in Sources */,
+				9A7FB9BA2BBC4EB3009F048D /* EditListItemView.swift in Sources */,
 				9A7FB9AD2BBC202F009F048D /* DueDate.swift in Sources */,
 				9A7FB9A42BBB55DD009F048D /* MyListsView.swift in Sources */,
 				9AE21C3F2B826ED400D9CE46 /* BaseModel.swift in Sources */,
