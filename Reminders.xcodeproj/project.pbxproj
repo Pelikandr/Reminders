@@ -25,6 +25,7 @@
 		9A7FB9BA2BBC4EB3009F048D /* EditListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7FB9B92BBC4EB3009F048D /* EditListItemView.swift */; };
 		9A7FB9BC2BBC4F66009F048D /* EditListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7FB9BB2BBC4F66009F048D /* EditListItemViewModel.swift */; };
 		9A7FB9BF2BBC5443009F048D /* CalendarButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7FB9BE2BBC5443009F048D /* CalendarButtonView.swift */; };
+		9A7FB9C12BBC6998009F048D /* Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7FB9C02BBC6998009F048D /* Delay.swift */; };
 		9AE21C202B8254BA00D9CE46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AE21C1F2B8254BA00D9CE46 /* Assets.xcassets */; };
 		9AE21C232B8254BA00D9CE46 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AE21C222B8254BA00D9CE46 /* Preview Assets.xcassets */; };
 		9AE21C2C2B82552400D9CE46 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE21C2B2B82552400D9CE46 /* HomeScreen.swift */; };
@@ -57,6 +58,7 @@
 		9A7FB9B92BBC4EB3009F048D /* EditListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditListItemView.swift; sourceTree = "<group>"; };
 		9A7FB9BB2BBC4F66009F048D /* EditListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditListItemViewModel.swift; sourceTree = "<group>"; };
 		9A7FB9BE2BBC5443009F048D /* CalendarButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarButtonView.swift; sourceTree = "<group>"; };
+		9A7FB9C02BBC6998009F048D /* Delay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delay.swift; sourceTree = "<group>"; };
 		9AE21C182B8254B900D9CE46 /* Reminders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reminders.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE21C1F2B8254BA00D9CE46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9AE21C222B8254BA00D9CE46 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				9A7FB9942BBB2795009F048D /* Constants.swift */,
+				9A7FB9C02BBC6998009F048D /* Delay.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 				9A7FB9A42BBB55DD009F048D /* MyListsView.swift in Sources */,
 				9AE21C3F2B826ED400D9CE46 /* BaseModel.swift in Sources */,
 				9A7FB99A2BBB42BB009F048D /* NSColorTransformer.swift in Sources */,
+				9A7FB9C12BBC6998009F048D /* Delay.swift in Sources */,
 				9A7FB9A62BBC1CEA009F048D /* MyListItemsHeaderView.swift in Sources */,
 				9AE21C3A2B82688000D9CE46 /* RemindersApp.swift in Sources */,
 			);
