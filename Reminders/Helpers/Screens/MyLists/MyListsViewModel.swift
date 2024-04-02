@@ -15,6 +15,12 @@ class MyListsViewModel: NSObject, ObservableObject {
     private let fetchedResultsController: NSFetchedResultsController<MyList>
     private var context: NSManagedObjectContext
 
+    var allListItemsCount: Int {
+        myLists.reduce(0) { sum, viewModel in
+            sum + viewModel.itemsCount
+        }
+    }
+
     init(context: NSManagedObjectContext) {
         self.context = context
         fetchedResultsController = NSFetchedResultsController(
