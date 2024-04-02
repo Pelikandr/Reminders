@@ -24,6 +24,18 @@ struct MyListViewModel: Identifiable {
         Color(myList.color ?? .clear)
     }
 
+    var items: [MyListItemViewModel] {
+        guard let items = myList.items, let myItems = (items.allObjects as? [MyListItem]) else { return [] }
+
+        return myItems
+            .filter { $0.isCompleted == false }
+            .map(MyListItemViewModel.init)
+    }
+
+    var itemsCount: Int {
+        items.count
+    }
+
     init(myList: MyList) {
         self.myList = myList
     }
