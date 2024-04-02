@@ -30,9 +30,29 @@ class MyListsViewModel: NSObject, ObservableObject {
         fetchAll()
     }
 
+    func saveTo(list: MyListViewModel, title: String, dueDate: Date?) {
+        let myListItem = MyListItem(context: context)
+        myListItem.title = title
+        myListItem.dueDate = dueDate
+        myListItem.myList = MyList.byId(id: list.id)
+
+        do {
+            try myListItem.save()
+        } catch {
+            print(error)
+        }
+    }
+
+    func deleteItem(_ item: MyListItemViewModel) {
+        let myListItem: MyListItem? = MyListItem.byId(id: item.listItemId)
+        if let myListItem {
+            try? myListItem.delete()
+        }
+    }
+
     func delete(_ myList: MyListViewModel) {
         let myList: MyList? = MyList.byId(id: myList.id)
-        if let myList = myList {
+        if let myList {
             try? myList.delete()
         }
     }

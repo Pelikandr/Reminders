@@ -19,7 +19,6 @@ public class MyList: NSManagedObject, BaseModel {
 }
 
 extension MyList {
-
     @nonobjc public class func fetchRequest() -> NSFetchRequest<MyList> {
         return NSFetchRequest<MyList>(entityName: "MyList")
     }
@@ -27,9 +26,6 @@ extension MyList {
     @NSManaged public var color: NSColor?
     @NSManaged public var name: String?
     @NSManaged public var items: NSSet?
-
 }
 
-extension MyList : Identifiable {
-
-}
+extension MyList : Identifiable { }

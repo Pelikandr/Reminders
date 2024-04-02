@@ -27,7 +27,17 @@ struct MyListsView: View {
                             color: myList.color
                         )
 
-                        MyListItemsView()
+                        MyListItemsView(
+                            items: myList.items, 
+                            onItemAdded: { title, dueDate in
+                                viewModel.saveTo(
+                                    list: myList,
+                                    title: title,
+                                    dueDate: dueDate
+                                )
+                            }, onItemDeleted: { item in
+                                viewModel.deleteItem(item)
+                            })
                     } label: {
                         HStack {
                             Image(systemName: Constants.Icons.line3HorizontalCircleFill)

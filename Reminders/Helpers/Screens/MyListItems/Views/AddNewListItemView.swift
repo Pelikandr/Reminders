@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct AddNewListItemView: View {
-
     @State private var title: String = ""
     @State private var dueDate: DueDate?
+
+    var onSave: (String, Date?) -> Void
 
     var body: some View {
         VStack(alignment: .leading) {
@@ -33,7 +34,11 @@ struct AddNewListItemView: View {
                 }
 
                 Button("Save") {
-
+                    if !title.isEmpty {
+                        onSave(title, dueDate?.value)
+                        title = ""
+                        dueDate = nil
+                    }
                 }
             }.padding()
         }
@@ -41,5 +46,5 @@ struct AddNewListItemView: View {
 }
 
 #Preview {
-    AddNewListItemView()
+    AddNewListItemView(onSave: { _, _ in })
 }

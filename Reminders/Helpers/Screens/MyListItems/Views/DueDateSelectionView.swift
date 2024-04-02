@@ -26,7 +26,7 @@ struct DueDateSelectionView: View {
                 dueDate = .tomorrow
             } label: {
                 VStack {
-                    Text("Today \n \(Date.today.formatAsString)")
+                    Text("Tomorrow \n \(Date.tomorrow.formatAsString)")
                 }
             }
 

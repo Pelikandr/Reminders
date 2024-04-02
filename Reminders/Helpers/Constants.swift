@@ -18,5 +18,6 @@ struct Constants {
         static let trayCircleFill = "tray.circle.fill"
         static let circleFill = "circle.fill"
         static let calendar = "calendar"
+        static let multiplyCircle = "multiply.circle"
     }
 }

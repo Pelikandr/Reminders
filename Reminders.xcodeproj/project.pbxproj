@@ -20,6 +20,8 @@
 		9A7FB9B02BBC2083009F048D /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7FB9AF2BBC2083009F048D /* Date+Extensions.swift */; };
 		9A7FB9B22BBC2603009F048D /* AddNewListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7FB9B12BBC2603009F048D /* AddNewListItemView.swift */; };
 		9A7FB9B42BBC26E5009F048D /* DueDateSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7FB9B32BBC26E5009F048D /* DueDateSelectionView.swift */; };
+		9A7FB9B62BBC2EDD009F048D /* MyListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7FB9B52BBC2EDD009F048D /* MyListItem.swift */; };
+		9A7FB9B82BBC32C4009F048D /* ListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7FB9B72BBC32C4009F048D /* ListItemCell.swift */; };
 		9AE21C202B8254BA00D9CE46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AE21C1F2B8254BA00D9CE46 /* Assets.xcassets */; };
 		9AE21C232B8254BA00D9CE46 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AE21C222B8254BA00D9CE46 /* Preview Assets.xcassets */; };
 		9AE21C2C2B82552400D9CE46 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE21C2B2B82552400D9CE46 /* HomeScreen.swift */; };
@@ -47,6 +49,8 @@
 		9A7FB9AF2BBC2083009F048D /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		9A7FB9B12BBC2603009F048D /* AddNewListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewListItemView.swift; sourceTree = "<group>"; };
 		9A7FB9B32BBC26E5009F048D /* DueDateSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DueDateSelectionView.swift; sourceTree = "<group>"; };
+		9A7FB9B52BBC2EDD009F048D /* MyListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListItem.swift; sourceTree = "<group>"; };
+		9A7FB9B72BBC32C4009F048D /* ListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemCell.swift; sourceTree = "<group>"; };
 		9AE21C182B8254B900D9CE46 /* Reminders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reminders.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE21C1F2B8254BA00D9CE46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9AE21C222B8254BA00D9CE46 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -174,6 +178,7 @@
 				9A7FB9A82BBC1E3C009F048D /* MyListItemsView.swift */,
 				9A7FB9B12BBC2603009F048D /* AddNewListItemView.swift */,
 				9A7FB9B32BBC26E5009F048D /* DueDateSelectionView.swift */,
+				9A7FB9B72BBC32C4009F048D /* ListItemCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -230,6 +235,7 @@
 				9AE21C342B825CCD00D9CE46 /* MyList.swift */,
 				9AE21C3E2B826ED400D9CE46 /* BaseModel.swift */,
 				9A7FB9AC2BBC202F009F048D /* DueDate.swift */,
+				9A7FB9B52BBC2EDD009F048D /* MyListItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -320,12 +326,14 @@
 				9AE21C2F2B82594700D9CE46 /* SideBarView.swift in Sources */,
 				9A7FB9AB2BBC1FA5009F048D /* MyListItemViewModel.swift in Sources */,
 				9AE21C422B82711000D9CE46 /* AddNewListView.swift in Sources */,
+				9A7FB9B82BBC32C4009F048D /* ListItemCell.swift in Sources */,
 				9A7FB9B42BBC26E5009F048D /* DueDateSelectionView.swift in Sources */,
 				9A7FB98E2BBB2618009F048D /* ColorListView.swift in Sources */,
 				9AE21C322B825B1000D9CE46 /* RemindersModel.xcdatamodeld in Sources */,
 				9A7FB99D2BBB4C72009F048D /* MyListsViewModel.swift in Sources */,
 				9AE21C352B825CCD00D9CE46 /* MyList.swift in Sources */,
 				9A7FB9B22BBC2603009F048D /* AddNewListItemView.swift in Sources */,
+				9A7FB9B62BBC2EDD009F048D /* MyListItem.swift in Sources */,
 				9AE21C2C2B82552400D9CE46 /* HomeScreen.swift in Sources */,
 				9A7FB9B02BBC2083009F048D /* Date+Extensions.swift in Sources */,
 				9A7FB9AD2BBC202F009F048D /* DueDate.swift in Sources */,
