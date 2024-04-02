@@ -8,11 +8,24 @@
 import SwiftUI
 
 struct HomeScreen: View {
+    @Environment(\.managedObjectContext) var context: NSManagedObjectContext
+
     var body: some View {
         NavigationView {
+            let myListsViewModel = MyListsViewModel(context: context)
+            let firstList = myListsViewModel.myLists.first
+
             SideBarView()
                 .frame(minWidth: 200)
-            Text("List")
+
+            if let firstList {
+                MyListItemsHeaderView(
+                    name: firstList.name,
+                    count: firstList.itemsCount,
+                    color: firstList.color
+                )
+                MyListItemsView(items: firstList.items)
+            }
         }
     }
 }

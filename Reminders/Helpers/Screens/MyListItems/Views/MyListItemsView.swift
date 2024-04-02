@@ -18,9 +18,9 @@ struct MyListItemsView: View {
     var onItemCompleted: ItemCompleted
 
     init(items: [MyListItemViewModel], 
-         onItemAdded: ItemAdded,
-         onItemDeleted: ItemDeleted,
-         onItemCompleted: ItemCompleted) {
+         onItemAdded: ItemAdded = nil,
+         onItemDeleted: ItemDeleted = nil ,
+         onItemCompleted: ItemCompleted = nil) {
         self.items = items
         self.onItemAdded = onItemAdded
         self.onItemDeleted = onItemDeleted
