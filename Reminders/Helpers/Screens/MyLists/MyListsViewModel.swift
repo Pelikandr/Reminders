@@ -27,9 +27,26 @@ class MyListsViewModel: NSObject, ObservableObject {
         super.init()
         fetchedResultsController.delegate = self
 
+        setupObservers()
         fetchAll()
     }
 
+    @objc private func objectManagedContextObjectsDidChange(notification: NSNotification) {
+        guard let userInfo = notification.userInfo else { return }
+        guard let updates = userInfo[NSUpdatedObjectsKey] as? Set<MyListItem>, updates.count > 0 else { return }
+
+        fetchAll()
+    }
+
+    // MARK: - List
+    func delete(_ myList: MyListViewModel) {
+        let myList: MyList? = MyList.byId(id: myList.id)
+        if let myList {
+            try? myList.delete()
+        }
+    }
+
+    // MARK: - List items
     func saveTo(list: MyListViewModel, title: String, dueDate: Date?) {
         let myListItem = MyListItem(context: context)
         myListItem.title = title
@@ -43,20 +60,24 @@ class MyListsViewModel: NSObject, ObservableObject {
         }
     }
 
+    func markAsCompleted(_ item: MyListItemViewModel) {
+        let myListItem: MyListItem? = MyListItem.byId(id: item.listItemId)
+        if let myListItem {
+            myListItem.isCompleted = true
+            try? myListItem.save()
+        }
+    }
+
     func deleteItem(_ item: MyListItemViewModel) {
         let myListItem: MyListItem? = MyListItem.byId(id: item.listItemId)
         if let myListItem {
             try? myListItem.delete()
         }
     }
+}
 
-    func delete(_ myList: MyListViewModel) {
-        let myList: MyList? = MyList.byId(id: myList.id)
-        if let myList {
-            try? myList.delete()
-        }
-    }
-
+// MARK: - Private
+extension MyListsViewModel {
     private func fetchAll() {
         do {
             try fetchedResultsController.performFetch()
@@ -65,6 +86,16 @@ class MyListsViewModel: NSObject, ObservableObject {
         } catch {
             print(error)
         }
+    }
+
+    private func setupObservers() {
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(
+            self,
+            selector: #selector(objectManagedContextObjectsDidChange),
+            name: NSNotification.Name.NSManagedObjectContextObjectsDidChange,
+            object: context
+        )
     }
 }
 
